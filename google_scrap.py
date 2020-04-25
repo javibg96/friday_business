@@ -22,19 +22,23 @@ else:
     soup = None
 
 resp = soup.find_all('div', class_='gsrt')
+resp2 = soup.find_all('div', class_='vk_gy vk_sh')
+print(resp2)
+for i in resp2:
+    print(f"Hora en {ciudad}: ", i.text)
 # print(resp)
 # [<div aria-level="3" class="gsrt vk_bk dDoNo" role="heading">17:44</div>]
 for i in resp:
     print(f"Hora en {ciudad}: ", i.text)
 results = []
-for g in soup.find_all('div', class_='r'):
-    anchors = g.find_all('a')
-    if anchors:
-        link = anchors[0]['href']
-        title = g.find('h3').text
-        item = {
-            "title": title,
-            "link": link
-        }
-        results.append(item)
-print(results)  # los resultados son titulo y enlace
+# for g in soup.find_all('div', class_='r'):
+#    anchors = g.find_all('a')
+#    if anchors:
+#        link = anchors[0]['href']
+#        title = g.find('h3').text
+#        item = {
+#            "title": title,
+#            "link": link
+#        }
+#        results.append(item)
+# print(results)  # los resultados son titulo y enlace
