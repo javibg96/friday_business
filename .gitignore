@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 .idea
+InstagramApi_Playground/credentials.cfg
