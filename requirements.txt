@@ -1,2 +1,5 @@
 pygame
-numpy
+sklearn
+numpy>=1.18.1
+setuptools~=40.8.0
+pyspark~=3.0.1
